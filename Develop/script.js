@@ -29,10 +29,13 @@ else {
   // confirm special characters 
   var confirmSpecialCharacters = confirm("Would you like to include special characters?");
 };
+// validate input with AT LEAST one character type selcted
 // if no option is true return error alert 
 if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === false) {
   alert("You must say yes to at least one option! Please try again.")
 }
+// if at least one option is selected generate password 
+else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true)
 
 console.log(characterLength);
 console.log(confirmLowercase);
@@ -40,10 +43,6 @@ console.log(confirmUppercase);
 console.log(confirmNumbers);
 console.log(confirmSpecialCharacters);
 
-
-// validate input with AT LEAST one character type seelcted
-// if at least one character type selected 
-// if no character types selected 
 
 // password generated to match criteria
 // generated password then displayed on page via alert or message 
