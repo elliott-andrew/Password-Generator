@@ -3,11 +3,17 @@ var generateBtn = document.querySelector("#generate");
 
 // button to activate prompts
 // prompts for each character option 
-var characterLength = prompt("How many characters would you like your password to be?")
-var confirmLowercase = confirm("Would you like to include lowercase characters?")
-var confirmUppercase = confirm("Would you like to include uppercase characters?")
-var confirmNumbers = confirm("Would you like to include numbers?")
-var confirmSpecialCharacters = confirm("Would you like to include special characters?")
+var characterLength = prompt("How many characters would you like your password to be?");
+var confirmLowercase = confirm("Would you like to include lowercase characters?");
+var confirmUppercase = confirm("Would you like to include uppercase characters?");
+var confirmNumbers = confirm("Would you like to include numbers?");
+var confirmSpecialCharacters = confirm("Would you like to include special characters?");
+
+console.log(characterLength);
+console.log(confirmLowercase);
+console.log(confirmUppercase);
+console.log(confirmNumbers);
+console.log(confirmSpecialCharacters);
 
 // options for lowercase, uppercase, numeric, special characters
 // lowercase options
@@ -18,7 +24,11 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890"
 // special character options
 var specialCharacters = "!@#$%^&*()_+"
+
 // validate input with AT LEAST one character type seelcted
+// if at least one character type selected 
+// if no character types selected 
+
 // password generated to match criteria
 // generated password then displayed on page via alert or message 
 
