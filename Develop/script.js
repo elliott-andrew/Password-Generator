@@ -2,6 +2,12 @@
 var generateBtn = document.querySelector("#generate");
 
 // button to activate prompts
+// prompts for each option 
+prompt("How many characters would you like your password to be?")
+prompt("Would you like to include lowercase characters?")
+prompt("Would you like to include uppercase characters?")
+prompt("Would you like to include numbers?")
+prompt("Would you like to include special characters?")
 // options for each password
 // choose length of the password <= 128 characters
 // options for lowercase, uppercase, numeric, special characters
