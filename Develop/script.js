@@ -6,9 +6,13 @@ var generateBtn = document.querySelector("#generate");
 // choose length of the password <= 128 characters
 // options for lowercase, uppercase, numeric, special characters
 // lowercase options
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
 // uppercase options 
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 // numeric optiions 
-// special character options 
+var numbers = "1234567890"
+// special character options
+var specialCharacters = "!@#$%^&*()_+"
 // validate input with AT LEAST one character type seelcted
 // password generated to match criteria
 // generated password then displayed on page via alert or message 
