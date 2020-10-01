@@ -69,11 +69,6 @@ else if (confirmLowercase) {
   chosen = specialCharacters;
 }
 
-// // if at least one option is selected generate password 
-// else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
-//   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
-// } 
-
 
 for (var i = 0; i < characterLength; i++) {
   // Generate a random decimal number between 0 and 1
