@@ -30,13 +30,14 @@ else {
   var confirmSpecialCharacters = confirm("Would you like to include special characters?");
 };
 // validate input with AT LEAST one character type selcted
-// if no option is true return error alert 
+// if no options are selected return error alert
 if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === false) {
   alert("You must say yes to at least one option! Please try again.")
 }
+// if all options are selected
 else if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters) {
   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
-  // if three options are picked 
+  // if three options are selected 
 } else if (confirmLowercase && confirmUppercase && confirmNumbers) {
   chosen = lowercase.concat(uppercase, numbers);
 } else if (confirmLowercase && confirmUppercase && confirmSpecialCharacters) {
@@ -46,7 +47,7 @@ else if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecia
 } else if (confirmUppercase && confirmNumbers && confirmSpecialCharacters) {
   chosen = uppercase.concat(numbers, specialCharacters);
 }
-// if two options are picked 
+// if two options are seleceted 
 else if (confirmLowercase && confirmUppercase) {
   chosen = lowercase.concat(uppercase);
 } else if (confirmLowercase && confirmNumbers) {
@@ -58,7 +59,7 @@ else if (confirmLowercase && confirmUppercase) {
 } else if (confirmUppercase && confirmSpecialCharacters) {
   chosen = uppercase.concat(specialCharacters);
 }
-// if one option is chosen 
+// if one option is selected 
 else if (confirmLowercase) {
   chosen = lowercase;
 } else if (confirmUppercase) {
