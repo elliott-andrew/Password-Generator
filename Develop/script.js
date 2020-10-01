@@ -34,21 +34,46 @@ else {
 if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === false) {
   alert("You must say yes to at least one option! Please try again.")
 }
-// if at least one option is selected generate password 
-else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
+else if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters) {
   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
+  // if three options are picked 
+} else if (confirmLowercase && confirmUppercase && confirmNumbers) {
+  chosen = lowercase.concat(uppercase, numbers);
+} else if (confirmLowercase && confirmUppercase && confirmSpecialCharacters) {
+  chosen = lowercase.concat(uppercase, specialCharacters);
+} else if (confirmLowercase && confirmNumbers && confirmSpecialCharacters) {
+  chosen = lowercase.concat(numbers, specialCharacters);
+} else if (confirmUppercase && confirmNumbers && confirmSpecialCharacters) {
+  chosen = uppercase.concat(numbers, specialCharacters);
 }
-console.log(chosen);
+// if two options are picked 
+else if (confirmLowercase && confirmUppercase) {
+  chosen = lowercase.concat(uppercase);
+} else if (confirmLowercase && confirmNumbers) {
+  chosen = lowercase.concat(numbers);
+} else if (confirmLowercase && specialCharacters) {
+  chosen = lowercase.concat(specialCharacters);
+} else if (confirmUppercase && confirmNumbers) {
+  chosen = uppercase.concat(numbers);
+} else if (confirmUppercase && confirmSpecialCharacters) {
+  chosen = uppercase.concat(specialCharacters);
+}
 
-var password = [""];
+// // if at least one option is selected generate password 
+// else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
+//   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
+// } 
+
 
 for (var i = 0; i < characterLength; i++) {
   // Generate a random decimal number between 0 and 1
   var characters = Math.floor(Math.random() * chosen.length);
 
   // Display in console
-  console.log(chosen[characters]);
+  console.log(characters);
 }
+
+
 
 
 // password generated to match criteria
