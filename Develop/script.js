@@ -10,6 +10,13 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 // special character options
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"]
+var chosen = []
+var password = []
+
+console.log("Lowercase: ", lowercase);
+console.log("Uppercase: ", uppercase);
+console.log("Numbers: ", numbers);
+console.log("Special Characters: ", specialCharacters);
 
 // questions for password options
 // prompt for Character length 
@@ -29,6 +36,13 @@ else {
   // confirm special characters 
   var confirmSpecialCharacters = confirm("Would you like to include special characters?");
 };
+
+console.log("Character Length: ", characterLength);
+console.log("Confirm Lowercase: ", confirmLowercase);
+console.log("Confirm Uppercase: ", confirmUppercase);
+console.log("Confirm Numbers: ", confirmNumbers);
+console.log("Confirm Special Characters: ", confirmSpecialCharacters);
+
 // validate input with AT LEAST one character type selcted
 // if no options are selected return error alert
 if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === false) {
@@ -37,8 +51,10 @@ if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialChar
 // if all options are selected
 else if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters) {
   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
-  // if three options are selected 
-} else if (confirmLowercase && confirmUppercase && confirmNumbers) {
+
+}
+// if three options are selected 
+else if (confirmLowercase && confirmUppercase && confirmNumbers) {
   chosen = lowercase.concat(uppercase, numbers);
 } else if (confirmLowercase && confirmUppercase && confirmSpecialCharacters) {
   chosen = lowercase.concat(uppercase, specialCharacters);
@@ -70,19 +86,21 @@ else if (confirmLowercase) {
   chosen = specialCharacters;
 }
 
+console.log(chosen);
 
-for (var i = 0; i < characterLength; i++) {
-  // Generate a random decimal number between 0 and 1
-  var characters = Math.floor(Math.random() * chosen.length);
-
-  // Display in console
-  console.log(characters);
+// Random selection from chosen options
+for (let i = 0; i < characterLength; i++) {
+  // Create temporary variable to hold randomly generated option
+  var passwordOptions = chosen[Math.floor(Math.random() * chosen.length)];
+  // Pushes randomly generated option to variable password
+  password.push(passwordOptions);
 }
-
-
-
-
 // password generated to match criteria
+// Joins password into a string and set it's variable to randomPassword
+var randomPassword = password.join("");
+
+console.log("Random password: ", randomPassword);
+
 // generated password then displayed on page via alert or message 
 
 
