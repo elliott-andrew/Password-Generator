@@ -58,6 +58,16 @@ else if (confirmLowercase && confirmUppercase) {
 } else if (confirmUppercase && confirmSpecialCharacters) {
   chosen = uppercase.concat(specialCharacters);
 }
+// if one option is chosen 
+else if (confirmLowercase) {
+  chosen = lowercase;
+} else if (confirmUppercase) {
+  chosen = uppercase;
+} else if (confirmNumbers) {
+  chosen = numbers;
+} else if (confirmSpecialCharacters) {
+  chosen = specialCharacters;
+}
 
 // // if at least one option is selected generate password 
 // else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
