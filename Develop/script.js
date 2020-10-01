@@ -3,13 +3,13 @@ var generateBtn = document.querySelector("#generate");
 
 // options for lowercase, uppercase, numeric, special characters
 // lowercase options
-var lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // uppercase options 
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // numeric optiions 
-var numbers = "1234567890".split("");
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 // special character options
-var specialCharacters = "!@#$%^&*()_+".split("");
+var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"]
 
 // questions for password options
 // prompt for Character length 
@@ -35,13 +35,16 @@ if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialChar
   alert("You must say yes to at least one option! Please try again.")
 }
 // if at least one option is selected generate password 
-else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true)
+else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
+  chosen = lowercase.concat(uppercase, numbers, specialCharacters);
+}
 
 console.log(characterLength);
 console.log(confirmLowercase);
 console.log(confirmUppercase);
 console.log(confirmNumbers);
 console.log(confirmSpecialCharacters);
+console.log(chosen)
 
 
 // password generated to match criteria
