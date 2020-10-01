@@ -38,13 +38,17 @@ if (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialChar
 else (confirmLowercase && confirmUppercase && confirmNumbers && confirmSpecialCharacters === true); {
   chosen = lowercase.concat(uppercase, numbers, specialCharacters);
 }
+console.log(chosen);
 
-console.log(characterLength);
-console.log(confirmLowercase);
-console.log(confirmUppercase);
-console.log(confirmNumbers);
-console.log(confirmSpecialCharacters);
-console.log(chosen)
+var password = [""];
+
+for (var i = 0; i < characterLength; i++) {
+  // Generate a random decimal number between 0 and 1
+  var characters = Math.floor(Math.random() * chosen.length);
+
+  // Display in console
+  console.log(chosen[characters]);
+}
 
 
 // password generated to match criteria
