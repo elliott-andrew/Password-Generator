@@ -12,3 +12,6 @@ Create an application to generate a random password based on criteria selected b
 
 
 ## Final Result
+![Landing Page][https://raw.githubusercontent.com/elliott-andrew/Password-Generator/master/Assets/_0000_Landing%20Page.jpg]
+![First Prompt][https://raw.githubusercontent.com/elliott-andrew/Password-Generator/master/Assets/_0001_First%20Prompt.jpg]
+![Result][https://raw.githubusercontent.com/elliott-andrew/Password-Generator/master/Assets/_0002_Result.jpg]
