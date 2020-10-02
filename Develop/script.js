@@ -38,7 +38,20 @@ function writePassword() {
   }
 
   var possibleCharacters = lowercase.concat(uppercase, numbers, special);
+  var yourPassword = "";
 
+  for (let i = 0; i < characterLength; i++) {
+    yourPassword += possibleCharacters.charAt(
+      Math.floor(Math.random() * possibleCharacters.length)
+    );
+  }
+
+  var password = yourPassword;
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+  console.log("Your Password: ", yourPassword)
   console.log("Possible: ", possibleCharacters)
   console.log(characterLength)
   console.log("Lowercase: ", lowercase)
