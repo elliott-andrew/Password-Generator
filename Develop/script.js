@@ -14,13 +14,10 @@ function writePassword() {
   var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   // special character options
   var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"]
+  // Placeholder for options selected by user
   var chosen = []
+  // Placeholder for generated password
   var yourPassword = []
-
-  console.log("Lowercase: ", lowercase);
-  console.log("Uppercase: ", uppercase);
-  console.log("Numbers: ", numbers);
-  console.log("Special Characters: ", specialCharacters);
 
   // questions for password options
   // prompt for Character length 
@@ -40,12 +37,6 @@ function writePassword() {
     // confirm special characters 
     var confirmSpecialCharacters = confirm("Would you like to include special characters?");
   };
-
-  console.log("Character Length: ", characterLength);
-  console.log("Confirm Lowercase: ", confirmLowercase);
-  console.log("Confirm Uppercase: ", confirmUppercase);
-  console.log("Confirm Numbers: ", confirmNumbers);
-  console.log("Confirm Special Characters: ", confirmSpecialCharacters);
 
   // validate input with AT LEAST one character type selcted
   // if no options are selected return error alert
@@ -90,8 +81,6 @@ function writePassword() {
     chosen = specialCharacters;
   }
 
-  console.log(chosen);
-
   // Random selection from chosen options
   for (let i = 0; i < characterLength; i++) {
     // Create temporary variable to hold randomly generated option
@@ -102,8 +91,6 @@ function writePassword() {
   // password generated to match criteria
   // Joins password into a string and set it's variable to randomPassword
   var generatePassword = yourPassword.join("");
-
-  console.log("Random password: ", generatePassword);
 
   // generated password then displayed on page via alert or message 
 
