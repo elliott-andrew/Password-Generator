@@ -8,7 +8,7 @@ function writePassword() {
   // Create prompt asking user for desired character length
   var characterLength = prompt("Please choose a password length between 8 and 128."); {
     // Determine if character length chosen is appropriate
-    if (characterLength < 8 || characterLength > 128 === true); {
+    if (characterLength > 7 || characterLength > 129) {
       // If chosen character length is appropriate ask follow up questions
       // Would the user like lowercase characters?
       var confirmLowercase = confirm("Would you like lowercase letters?"); {
@@ -34,12 +34,17 @@ function writePassword() {
           var special = "!@#$%^&*()_+";
         } else { special = "" }
       }
-    }
+    } else { alert("Please select a number between 8 and 128.") }
   }
-  console.log(lowercase)
-  console.log(uppercase)
-  console.log(numbers)
-  console.log(special)
+
+  var possibleCharacters = lowercase.concat(uppercase, numbers, special);
+
+  console.log("Possible: ", possibleCharacters)
+  console.log(characterLength)
+  console.log("Lowercase: ", lowercase)
+  console.log("Uppercase: ", uppercase)
+  console.log("Numbers: ", numbers)
+  console.log("Special: ", special)
 }
 
 
