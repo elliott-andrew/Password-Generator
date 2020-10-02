@@ -8,7 +8,7 @@ function writePassword() {
   // Create prompt asking user for desired character length
   var characterLength = prompt("Please choose a password length between 8 and 128."); {
     // Determine if character length chosen is appropriate
-    if (characterLength > 7 || characterLength > 129) {
+    if (characterLength > 7 && characterLength < 129) {
       // If chosen character length is appropriate ask follow up questions
       // Would the user like lowercase characters?
       var confirmLowercase = confirm("Would you like lowercase letters?"); {
