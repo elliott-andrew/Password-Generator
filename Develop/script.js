@@ -5,6 +5,13 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function writePassword() {
+  // Placeholder variables for data collected 
+  var lowercase = "";
+  var uppercase = "";
+  var numbers = "";
+  var special = "";
+  var yourPassword = "";
+
   // Create prompt asking user for desired character length
   var characterLength = prompt("Please choose a password length between 8 and 128."); {
     // Determine if character length chosen is appropriate
@@ -14,25 +21,25 @@ function writePassword() {
       var confirmLowercase = confirm("Would you like lowercase letters?"); {
         if (confirmLowercase === true) {
           var lowercase = "abcdefghijklmnopqrstuvqxyz";
-        } else { lowercase = "" }
+        }
       }
       // Would the user like uppercase characters?
-      var confirmUppercase = confirm("Would you like lowercase letters?"); {
+      var confirmUppercase = confirm("Would you like uppercase letters?"); {
         if (confirmUppercase === true) {
           var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        } else { uppercase = "" }
+        }
       }
       // Would the user like numbers?
-      var confirmNumbers = confirm("Would you like lowercase letters?"); {
+      var confirmNumbers = confirm("Would you like numbers?"); {
         if (confirmNumbers === true) {
           var numbers = "1234567890";
-        } else { numbers = "" }
+        }
       }
       // Would the user like special characters?
-      var confirmSpecial = confirm("Would you like lowercase letters?"); {
+      var confirmSpecial = confirm("Would you like special characters?"); {
         if (confirmSpecial === true) {
           var special = "!@#$%^&*()_+";
-        } else { special = "" }
+        }
       }
       // If user did not select the proper number, alert them to try again
     } else { alert("Please select a number between 8 and 128.") }
@@ -40,8 +47,6 @@ function writePassword() {
 
   // Create a string of all possible character combinations
   var possibleCharacters = lowercase.concat(uppercase, numbers, special);
-  // Placeholder for randomly generated characters
-  var yourPassword = "";
 
   // Loop to pull randomly from possible characters
   for (let i = 0; i < characterLength; i++) {
