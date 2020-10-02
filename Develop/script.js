@@ -34,28 +34,24 @@ function writePassword() {
           var special = "!@#$%^&*()_+";
         } else { special = "" }
       }
+      // If user did not select the proper number, alert them to try again
     } else { alert("Please select a number between 8 and 128.") }
   }
 
+  // Create a string of all possible character combinations
   var possibleCharacters = lowercase.concat(uppercase, numbers, special);
+  // Placeholder for randomly generated characters
   var yourPassword = "";
 
+  // Loop to pull randomly from possible characters
   for (let i = 0; i < characterLength; i++) {
     yourPassword += possibleCharacters.charAt(
       Math.floor(Math.random() * possibleCharacters.length)
     );
   }
-
+  // Sets randomly generated password to the corresponding HTML tags
   var password = yourPassword;
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-  console.log("Your Password: ", yourPassword)
-  console.log("Possible: ", possibleCharacters)
-  console.log(characterLength)
-  console.log("Lowercase: ", lowercase)
-  console.log("Uppercase: ", uppercase)
-  console.log("Numbers: ", numbers)
-  console.log("Special: ", special)
 }
