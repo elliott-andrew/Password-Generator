@@ -18,6 +18,7 @@ function writePassword() {
   var generatedNumbers = "";
   var generatedSpecial = "";
   var generatedRemainder = "";
+  var totalConfirmed = 0;
 
   // Create prompt asking user for desired character length
   var characterLength = prompt("Please choose a password length between 8 and 128."); {
@@ -59,10 +60,24 @@ function writePassword() {
 
   // Guarantee all characters types are pulled from each selected option 
   // Determine the number of character options selected by the user 
-  var characterDividend = [confirmLowercase, confirmNumbers, confirmSpecial, confirmUppercase].filter(Boolean).length;
+  if (confirmLowercase) {
+    totalConfirmed++;
+  }
+
+  if (confirmUppercase) {
+    totalConfirmed++;
+  }
+
+  if (confirmNumbers) {
+    totalConfirmed++;
+  }
+
+  if (confirmSpecial) {
+    totalConfirmed++;
+  }
 
   // Divide the number of options selected by the character length and round down
-  var dividedCharLength = Math.floor(characterLength / characterDividend);
+  var dividedCharLength = Math.floor(characterLength / totalConfirmed);
   // If lowercase, add equal number of characters
   if (confirmLowercase) {
     while (generatedLowercase.length < dividedCharLength) {
