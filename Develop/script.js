@@ -51,8 +51,11 @@ function writePassword() {
       }
       // If user did not select the proper number, alert them to try again
     } else { alert("Please select a number between 8 and 128.") }
-  } if (confirmLowercase === false && confirmUppercase === false && confirmNumbers === false && confirmSpecial === false) {
+  }
+
+  if (confirmLowercase, confirmUppercase, confirmNumbers, confirmSpecial != true) {
     alert("You must select at least one character option.")
+    return;
   }
 
   // Create a string of all possible character combinations
