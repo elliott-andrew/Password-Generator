@@ -113,11 +113,11 @@ function writePassword() {
   // Add all generated characters into one string
   var randomizedCharacters = generatedCharacters.concat(generatedRemainder);
 
-  while (yourPassword.length < randomizedCharacters) {
+  while (yourPassword.length < randomizedCharacters.length) {
     yourPassword += randomizedCharacters[Math.floor(Math.random() * randomizedCharacters.length)];
   }
 
-  console.log(yourPassword);
+  console.log("Password: ", yourPassword);
 
   // Sets randomly generated password to the corresponding HTML tags
   var password = yourPassword;
